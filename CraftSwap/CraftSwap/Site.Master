@@ -1,0 +1,70 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site.master.vb" Inherits="CraftSwap.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CraftSwap</title>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <asp:ContentPlaceHolder ID="placehldVBScripts" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <header>
+        <img src="/img/craftswaplogo.png" class="logo" />
+        <nav class="topnav">
+
+            <ul class="nav">
+                <li><asp:HyperLink runat="server" NavigateUrl="~/Default.aspx" Text="Home"></asp:HyperLink></li>
+                <li>
+                    <a>Products</a>
+                    <ul class="subnav">
+                        <li><asp:HyperLink runat="server" NavigateUrl="~/Product-List.aspx?list=cat&catid=knitting" Text="Knitting"></asp:HyperLink></li>
+                        <li><asp:HyperLink runat="server" NavigateUrl="~/Product-List.aspx?list=cat&catid=crochet" Text="Crochet"></asp:HyperLink></li>
+                        <li><asp:HyperLink runat="server" NavigateUrl="~/Product-List.aspx?list=cat&catid=macrame" Text="Macrame"></asp:HyperLink></li>
+                        <li><asp:HyperLink runat="server" NavigateUrl="~/Product-List.aspx?list=cat&catid=papercraft" Text="Papercraft"></asp:HyperLink></li>
+                        <li><asp:HyperLink runat="server" NavigateUrl="~/Product-List.aspx?list=cat&catid=quilting" Text="Quilting"></asp:HyperLink></li>
+                        <li><asp:HyperLink runat="server" NavigateUrl="~/Product-List.aspx?list=cat&catid=toymaking" Text="Doll &amp; Toy Making"></asp:HyperLink></li>
+                        <li><asp:HyperLink runat="server" NavigateUrl="~/Product-List.aspx?list=cat&catid=sculpting" Text="Sculpting &amp; Carving"></asp:HyperLink></li>
+                        <li><asp:HyperLink runat="server" NavigateUrl="~/Product-List.aspx?list=cat&catid=xstitching" Text="Cross Stitching"></asp:HyperLink></li>
+                        <li><asp:HyperLink runat="server" NavigateUrl="~/Product-List.aspx?list=cat&catid=beading" Text="Beading"></asp:HyperLink></li>
+                        <li><asp:HyperLink runat="server" NavigateUrl="~/Product-List.aspx?list=cat&catid=weaving" Text="Weaving"></asp:HyperLink></li>
+                        <li><asp:HyperLink runat="server" NavigateUrl="~/Product-List.aspx?list=cat&catid=woodworking" Text="Woodworking"></asp:HyperLink></li>
+                        <li><asp:HyperLink runat="server" NavigateUrl="~/Product-List.aspx?list=cat&catid=upcycling" Text="Upcycling"></asp:HyperLink></li>
+                    </ul>
+                </li>
+                <li><asp:HyperLink runat="server" NavigateUrl="~/AboutUs.aspx" Text="About Us"></asp:HyperLink></li>
+                <li><asp:HyperLink runat="server" NavigateUrl="~/user/Profile.aspx" Text="Your Profile"></asp:HyperLink></li>
+                
+                <li><asp:HyperLink ID="btnLogin" runat="server" NavigateUrl="~/Login.aspx" >[btnLogin]</asp:HyperLink></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
+
+    <br/>
+
+    <asp:ContentPlaceHolder ID="BodyContentPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <footer>
+
+        <img src="/img/craftswaplogo.png" class="logo" />
+
+        <span class="footer-links">
+            <asp:HyperLink runat="server" NavigateUrl="~/Privacy-Policy.aspx" Text="Privacy Policy" />
+            <br />
+            <asp:HyperLink runat="server" NavigateUrl="~/Bibliography.aspx" Text="Bibliography" />
+
+        </span>
+    </footer>
+
+</body>
+</html>
